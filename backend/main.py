@@ -17,7 +17,7 @@ from datetime import datetime  # Add this import at the top
 load_dotenv()
 
 
-client = OpenAI(api_key=os.getenv("***REMOVED***proj-HuaAmm78o_1GORpSXeTFns1P86x-es5R9XlDLPF1u_fo-Rp8erv1SnmvpEqJv1aSVftFLvYoesT3BlbkFJbuTz-i6C9TTxhndCYpqcfJUMg2pf2HVrxOzPAtWFN0JLdUlMC5IitLyffPtBCvorIOxokEfYgA"))  # ✅ Updated API client
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 # Firebase Setup
@@ -34,7 +34,7 @@ UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Ensure uploads folder exists
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)  # ✅ Fix CORS issue
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)  # Fix CORS issue
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 # Convert PDFs to Images
@@ -48,14 +48,14 @@ def convert_pdf_to_images(pdf_path):
         images = convert_from_path(pdf_path, poppler_path=poppler_path)
 
         if not images:
-            print("❌ PDF conversion failed")
+            print(" PDF conversion failed")
             return []
 
         image_paths = []
         for i, image in enumerate(images):
             image_path = f"{pdf_path}_page_{i}.png"
             image.save(image_path, "PNG")
-            print(f"✅ Saved: {image_path}")  # Debugging
+            print(f"Saved: {image_path}")  # Debugging
             image_paths.append(image_path)
 
         return image_paths
