@@ -41,7 +41,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 def convert_pdf_to_images(pdf_path):
     """Converts PDF pages into images for OCR processing."""
     try:
-        print(f"📄 Converting PDF: {pdf_path}")  # Debugging
+        print(f"Converting PDF: {pdf_path}")  # Debugging
 
         # 🔹 Set Poppler path (Mac/Linux/Windows)
         poppler_path = "/opt/homebrew/bin"  # Adjust for Windows if needed
@@ -61,7 +61,7 @@ def convert_pdf_to_images(pdf_path):
         return image_paths
 
     except Exception as e:
-        print(f"⚠️ Error converting PDF: {e}")  # Debugging
+        print(f"Error converting PDF: {e}")  # Debugging
         return []
 
 # Clean extracted text
