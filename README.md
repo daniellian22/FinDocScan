@@ -6,21 +6,28 @@
 
 ## 🚀 Features
 
-- 🔐 **Secure Authentication** with Google Sign-In via Firebase Auth
-- 🧠 **AI-Powered Extraction** using OpenAI GPT to extract structured data
-- 🖼️ **Image Upload and Preview** with automatic text detection
-- 📁 **Firebase Firestore Integration** for storing scanned document metadata
-- 🧹 **User Controls** for deleting and managing documents
+- 🔐 **Secure Authentication** with Google Sign-In via Firebase Auth  
+- 🧠 **AI-Powered Extraction** using OpenAI GPT to extract structured data  
+- 🖼️ **Image Upload and Preview** with automatic text detection  
+- 📁 **Firebase Firestore Integration** for storing scanned document metadata  
+- 🧹 **User Controls** for deleting and managing documents  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, Tailwind CSS
-- **Backend:** Python, Flask, OpenAI API
-- **Auth/DB:** Firebase Auth & Firestore
-- **OCR/AI:** Tesseract, OpenAI GPT-4o
-- **Storage:** Local file storage (for dev), can extend to GCS/S3
+- **Frontend:** React, Tailwind CSS  
+- **Backend:** Python, Flask, OpenAI API  
+- **Auth/DB:** Firebase Auth & Firestore  
+- **OCR/AI:** Tesseract, OpenAI GPT-4o  
+- **Storage:** Local file system (for development)
 
+---
 
+## 📦 Setup Instructions
 
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/daniellian22/FinDocScan.git
+cd FinDocScan
