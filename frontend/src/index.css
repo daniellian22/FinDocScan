@@ -1,0 +1,109 @@
+/* Modern Styles for the App */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Blue gradient */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #333;
+}
+
+/* Upload & Retrieve Buttons */
+button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003b80);
+  transform: scale(1.05);
+}
+
+/* Documents List */
+.documents-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Document Cards */
+.response-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  max-width: 700px;
+  text-align: left;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.response-box:hover {
+  transform: scale(1.02);
+}
+
+/* Extracted Text Box */
+.response-box pre {
+  max-height: 250px;
+  overflow-y: auto;
+  background: #eef2f7;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+}
+
+/* File Link */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  margin: 10px auto;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
